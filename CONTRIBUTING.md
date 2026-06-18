@@ -1,37 +1,39 @@
-# Contributing to FAIRGAME
+# Contributing to FAIRGAME-Trust
 
-First of all, thank you for your interest in contributing to our project!
+Thank you for your interest in contributing to FAIRGAME-Trust.
 
-There are several ways in which you can contribute, beyond writing code. The goal of this document is to provide a high-level overview of how you can get involved and how your contribution will be considered.
+This project investigates trust formation and information-seeking behaviour in Large Language Model (LLM) agents through repeated game-theoretic interactions.
 
-## Asking Questions 
+## How to Contribute
 
-Do you have a question? Feel free to [open an issue](https://github.com/aira-list/FAIRGAME/issues/new?assignees=&labels=question&template=question.md).
+Contributions are welcome in the form of:
 
-Project maintainers will be eager to listen from you and help you out. Please, try to compose a clear and concise question. The more information you provide, the better we will be able to help you.
+* Bug fixes
+* Documentation improvements
+* Additional analysis methods
+* New trust metrics
+* New experimental configurations
+* Additional LLM provider integrations
+* Unit tests and validation improvements
+
+## Pull Requests
+
+Please ensure that:
+
+* Code is documented where appropriate.
+* Existing functionality is not broken.
+* Unit tests pass before submitting.
+* New features include corresponding tests where possible.
 
 ## Reporting Issues
 
-Do you have you identified a reproducible problem in our code? or have a feature request? We want to hear about it! Please follow the next steps:
+If you discover a bug or unexpected behaviour, please open a GitHub issue containing:
 
-### Look for an Existing Issue
+* A description of the problem.
+* Steps to reproduce.
+* Relevant logs or error messages.
+* Environment information (Python version, operating system, etc.).
 
-Sometimes the issue you want to report is being already addressed, or is planned to be addressed soon. Before you create a new issue, please do a search in [open issues](https://github.com/aira-list/FAIRGAME/issues) to see if the issue or feature request has already been filed.
+## Research Contributions
 
-If you find your issue already exists, do not hesittate to make relevant comments and add your [reaction](https://github.com/blog/2119-add-reactions-to-pull-requests-issues-and-comments). Please, use a reaction in place of a "+1" comment, we believe it's easy: 👍 for upvoting and 👎 for downvoting.
-
-If you cannot find an existing issue that describes your bug or feature, [create a new issue](https://github.com/SOM-Research/aira-list/FAIRGAME/issues/new?assignees=&labels=&template=proposal.md). The template will guide you on the issue reporting.
-
-### Writing Good Bug Reports and Feature Requests
-
-Whenever possible, we ask you to file a single issue per problem and feature request. Please do not enumerate multiple bugs or feature requests in the same issue, as it may be hard to track the progress.
-
-As you can imagine, the more information you can provide, the more likely someone will be successful at reproducing the issue and finding a fix.
-
-### Creating Pull Requests
-
-Please refer to the article on [creating pull requests](https://github.com/microsoft/vscode/wiki/How-to-Contribute#pull-requests) before contributing to this project.
-
-### Governance
-
-Any contribution you send to us will be addressed by the project maintainers following the governance rules described in the [GOVERNANCE.md](GOVERNANCE.md) document.
+Researchers interested in extending FAIRGAME-Trust are encouraged to submit pull requests or open discussions regarding new trust models, game environments, and behavioural analysis techniques.

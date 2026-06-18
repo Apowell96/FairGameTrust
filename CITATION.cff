@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: FAIRGAME-Trust
+message: "If you use this software, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: Powell
+    given-names: Andrew
+  - family-names: Huber
+    given-names: Nikita
+  - family-names: DISSANAYAKE
+    given-names: DHANUSHKA
+  - family-names: UFEOSHI
+    given-names: GRACE 
+repository-code: https://github.com/Apowell96/FairGameTrust
+license: Apache-2.0
+abstract: >
+  FAIRGAME-Trust extends the FAIRGAME framework by introducing
+  trust-based decision making through voluntary monitoring costs
+  in repeated game-theoretic interactions between Large Language
+  Model agents.

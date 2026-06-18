@@ -312,7 +312,7 @@ NO_LOOK
 
         if isinstance(value, str):
             cleaned = value.strip().lower()
-            return cleaned in {"", "0", "null"}
+            return cleaned in {"", "0", "null", "none"}
 
         return False
 
@@ -320,12 +320,15 @@ NO_LOOK
         """
         Build the player's own personality line.
 
-        The agent's own personality should still be shown when it is "none",
-        because that tells the LLM it has no specific behavioural strategy.
+        A personality of "none" is treated as hidden and omitted from the
+        prompt, matching the normal prompt builder.
         """
         personality = getattr(agent, "personality", None)
         if personality is None or (isinstance(personality, str) and personality.strip() == ""):
             personality = "none"
+
+        if self._is_hidden_personality(personality):
+            return ""
 
         return f"You are {personality}.\n"
 

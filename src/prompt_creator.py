@@ -47,16 +47,16 @@ class PromptCreator:
 
         if isinstance(value, str):
             cleaned = value.strip().lower()
-            return cleaned in {"", "0", "null"}
+            return cleaned in {"", "0", "null", "none"}
 
         return False
 
     def process_intro(self, agent, pv_dict):
         """
-        Always keep the intro block and ensure the personality is explicit.
+        Keep the intro block only when the personality should be shown.
 
-        The agent's own personality should still show when it is "none", since
-        that signals to the LLM that there is no specific behavioral profile.
+        A configured personality of "none" is treated as hidden, matching the
+        way we already suppress hidden opponent personality information.
         """
         intro = self._find_part('intro')
         if intro is None:
@@ -65,6 +65,10 @@ class PromptCreator:
         personality = getattr(agent, "personality", "none")
         if personality is None or (isinstance(personality, str) and personality.strip() == ""):
             personality = "none"
+
+        if self._is_hidden_personality(personality):
+            self._remove_part(intro)
+            return
 
         self._replace_part(intro)
 

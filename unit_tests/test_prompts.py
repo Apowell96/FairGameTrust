@@ -199,7 +199,7 @@ class TestPrompts(unittest.TestCase):
             history = {}
         
         return f"""You are {currentPlayer} and your opponent is {opponent}. 
-        {f'You are {currentPlayerPerso}.' if currentPlayerPerso != 'None' else ''}
+        {f'You are {currentPlayerPerso}.' if currentPlayerPerso.strip().lower() != 'none' else ''}
         {f'{opponent} has a probability of 80% of being cooperative.' if opponentPerso != 'None' and opponent_prob > 0 else ''}
 
         You and {opponent} are arrested for a crime and held in separate cells. You cannot communicate.

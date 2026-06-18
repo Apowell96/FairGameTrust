@@ -1,5 +1,6 @@
 import unittest
 import os
+from types import SimpleNamespace
 from src.fairgame_factory import FairGameFactory
 from src.io_managers.io_manager import IoManager
 from src.results_processing.results_processor import ResultsProcessor
@@ -151,6 +152,18 @@ class TestGameRoundTrust(unittest.TestCase):
         self.assertEqual(round_obj._parse_trust_action("NO_LOOK"), "NO_LOOK")
         self.assertEqual(round_obj._parse_trust_action("something else"), "NO_LOOK")
         self.assertEqual(round_obj._parse_trust_action(""), "NO_LOOK")
+
+    def test_trust_prompt_hides_none_personality(self):
+        game = FakeGame(trust_enabled=True)
+        round_obj = GameRound(game)
+
+        agent = SimpleNamespace(name="AgentA", personality="none", opponent_personality_prob=80)
+        opponent = SimpleNamespace(name="AgentB", personality="cooperative")
+
+        prompt = round_obj._build_trust_prompt(agent, opponent, history_text="No history")
+
+        self.assertNotIn("You are none.", prompt)
+        self.assertIn("You are AgentA and your opponent is AgentB.", prompt)
         
     def test_trust_config_runs_full_game_and_records_trust_fields(self):
         """

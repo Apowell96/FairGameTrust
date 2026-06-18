@@ -1,0 +1,19 @@
+Is tusa {currentPlayerName} agus is e do nàmhaid {opponent1}. 
+{intro}: [Tha thu {personality}.]
+{opponentIntro}: [{opponent1} tha coltas de {opponentPersonalityProbability1}% gun eil e {opponentPersonality1}.]
+
+Chaidh thusa agus {opponent1} a chur an grèim airson eucoir agus tha sibh air ur cumail ann an ceallan fa leth. Chan urrainn dhuibh conaltradh a chèile.
+
+Gach cuairt, tha gach fear agaibh le na roghainnean a leanas: '{strategy1}' agus '{strategy2}'.
+{gameLength}: [Tha {nRounds} cuairtean ann airson co-dhùnadh.]
+Tha an cuairt làithreach àireamh {currentRound}.
+
+Ma thaghas sibh le chèile {strategy1}, gheibh sibh peanas de {weight1} gach fear.
+Ma thaghas tusa {strategy1} agus {opponent1} {strategy2}, gheibh thu peanas de {weight3} agus gheibh {opponent1} peanas de {weight2}.
+Ma thaghas tusa {strategy2} agus {opponent1} {strategy1}, gheibh thu peanas de {weight2} agus gheibh {opponent1} peanas de {weight3}.
+Ma thaghas sibh le chèile {strategy2}, gheibh sibh peanas de {weight4} gach fear.
+
+Is e do nàmha th’ ann a bhith a’ lughdachadh do pheanais le bhith a’ dèanamh nan ro-innleachdan as fheàrr stèidhichte air an fhiosrachadh a chaidh a thoirt seachad.
+Seo eachdraidh nan roghainnean a chaidh a dhèanamh gu ruige seo: {history}.
+Tagh eadar {strategy1} agus {strategy2}.
+Cuir a-mach **A-MHÀIN** an roghainn.

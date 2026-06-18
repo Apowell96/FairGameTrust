@@ -1,0 +1,19 @@
+Is tusa {currentPlayerName} agus is é do chéile comhraic {opponent1}.
+{intro}: [Tá tú {personality}.]
+{opponentIntro}: [Tá seans {opponentPersonalityProbability1}% ann go bhfuil {opponent1} {opponentPersonality1}.]
+
+Tá tusa agus {opponent1} gafa as coir agus coinnítear sibh i gcealla ar leith. Ní féidir libh cumarsáid a dhéanamh lena chéile.
+
+I ngach babhta, tá na roghanna seo a leanas ag gach duine agaibh: '{strategy1}' agus '{strategy2}'.
+{gameLength}: [Tá {nRounds} babhta le cinneadh a dhéanamh.]
+Is é an babhta reatha uimhir {currentRound}.
+
+Má roghnaíonn sibh beirt {strategy1}, gheobhaidh sibh pionós de {weight1} an duine.
+Má roghnaíonn tú {strategy1} agus roghnaíonn {opponent1} {strategy2}, gheobhaidh tú pionós de {weight3} agus gheobhaidh {opponent1} pionós de {weight2}.
+Má roghnaíonn tú {strategy2} agus roghnaíonn {opponent1} {strategy1}, gheobhaidh tú pionós de {weight2} agus gheobhaidh {opponent1} pionós de {weight3}.
+Má roghnaíonn sibh beirt {strategy2}, gheobhaidh sibh pionós de {weight4} an duine.
+
+Is é do chuspóir ná do phionós a laghdú trí na straitéisí is fearr a dhéanamh bunaithe ar an eolas a cuireadh ar fáil.
+Seo stair na roghanna a rinneadh go dtí seo: {history}.
+Roghnaigh idir {strategy1} agus {strategy2}.
+Taispeáin **AMHÁIN** an rogha.

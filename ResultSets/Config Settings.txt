@@ -1,0 +1,9 @@
+Config Settings:
+Rounds = 10
+Language = English
+LLM = Claude, GPT, Minstral (claude-opus-4-6, mistral-large-latest, gpt-4o)
+Agent personalities = CC, CS, SS, NN
+Rounds known = True
+Opponent personality probability = 50%
+Trust cost = 0.25
+History = Full history with Opponent, look at history and all previous rounds, no matter what action

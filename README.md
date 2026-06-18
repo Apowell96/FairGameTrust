@@ -10,19 +10,53 @@ The framework records trust decisions, monitoring costs, strategic choices, and 
 
 ---
 
-## Research Objectives
+### Research Overview
 
-FAIRGAME-Trust has been designed to support research into:
+Trust plays a fundamental role in repeated interactions between intelligent agents. In many real-world scenarios, agents must decide whether to verify information at a cost or act based on trust alone. While Large Language Models have been extensively evaluated on cooperation and strategic decision-making tasks, little work has explored how trust develops and evolves during repeated interactions.
 
-* Trust formation in LLM agents
-* Information-seeking behaviour under uncertainty
-* Monitoring and verification strategies
-* Cost-benefit trade-offs in decision-making
-* Cooperation and trust dynamics in repeated interactions
-* Behavioural differences across LLM providers
-* Multi-agent AI systems and emergent behaviour
+FAIRGAME-Trust extends the FAIRGAME framework by introducing an explicit trust decision prior to strategic action selection. Before choosing a game action, agents must decide whether to incur a monitoring cost to inspect an opponent's previous behaviour. This creates a trade-off between acquiring information and preserving resources, allowing trust to emerge as an observable behavioural phenomenon.
+
+The framework provides a controlled environment for studying trust formation, information-seeking behaviour, and cooperation dynamics in Large Language Model agents. By recording monitoring decisions, strategic choices, and game outcomes over repeated interactions, researchers can investigate how different models balance verification and trust under uncertainty.
 
 ---
+
+## Trust Decision Process
+
+Each round consists of two stages:
+
+1. **Trust Decision**
+
+   * `LOOK`: Pay a monitoring cost and observe an opponent's previous behaviour.
+   * `NO_LOOK`: Avoid the monitoring cost and act without additional information.
+
+2. **Strategic Decision**
+
+   * Select a game action based on available information.
+
+The interaction is repeated over multiple rounds, enabling the analysis of trust formation, trust maintenance, and changes in monitoring behaviour over time.
+
+---
+
+## Collected Metrics
+
+FAIRGAME-Trust records:
+
+* Trust decisions (`LOOK` / `NO_LOOK`)
+* Monitoring costs incurred
+* Strategic actions
+* Individual round scores
+* Cumulative scores
+* Behavioural changes over time
+
+These metrics can be used to analyse trust development, information-seeking behaviour, cooperation patterns, and decision-making under uncertainty.
+
+## Novel Contribution
+
+The original FAIRGAME framework focuses on evaluating strategic behaviour and behavioural consistency across different experimental conditions.
+
+FAIRGAME-Trust extends this approach by introducing trust as a measurable behavioural variable. Agents are no longer assumed to possess complete information about previous interactions. Instead, they must actively decide whether to acquire information at a cost or act based on trust.
+
+This modification transforms trust from an implicit assumption into an observable and quantifiable behaviour, enabling the study of trust formation and information-seeking strategies in Large Language Model agents.
 
 ## Repository Structure
 

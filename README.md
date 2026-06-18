@@ -10,6 +10,10 @@ The framework records trust decisions, monitoring costs, strategic choices, and 
 
 ---
 
+## Getting Started
+
+See [QuickStart.md](QuickStart.md) for a complete walkthrough.
+
 ### Research Overview
 
 Trust plays a fundamental role in repeated interactions between intelligent agents. In many real-world scenarios, agents must decide whether to verify information at a cost or act based on trust alone. While Large Language Models have been extensively evaluated on cooperation and strategic decision-making tasks, little work has explored how trust develops and evolves during repeated interactions.

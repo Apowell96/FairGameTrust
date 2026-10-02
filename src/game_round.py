@@ -330,7 +330,7 @@ NO_LOOK
         if self._is_hidden_personality(personality):
             return ""
 
-        return f"You are {personality}.\n"
+        return f"You are {personality} with the other agent.\n"
 
     def _build_opponent_personality_intro_line(self, agent, opponent):
         """

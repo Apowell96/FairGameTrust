@@ -127,30 +127,30 @@ def main() -> None:
         
     ############################################################################
     
-    # #5A Create and run a single game ---- comment this out if you want to run 10x games at a time and uncomment section 5B
-    print(f"\n--- Starting Singlerun ---")
+    # # #5A Create and run a single game ---- comment this out if you want to run 10x games at a time and uncomment section 5B
+    # print(f"\n--- Starting Singlerun ---")
 
-    runner = GamesRunner(call_type, config, templates, fairgame_url)
-    results = runner.run()
+    # runner = GamesRunner(call_type, config, templates, fairgame_url)
+    # results = runner.run()
 
-    # 6 Save single run
-    save_results(results, f"{config_name}_single_run")
+    # # 6 Save single run
+    # save_results(results, f"{config_name}_single_run")
 
-    print(f"--- Finished Single run ---")
+    # print(f"--- Finished Single run ---")
 
 
-    #5B Create the runner and run the games ---- comment this out if you do not want to run 10x games at a time and uncomment section 5A
-    # for run_index in range(10):
-    #     print(f"\n--- Starting run {run_index + 1}/10 ---")
+    # 5B Create the runner and run the games ---- comment this out if you do not want to run 10x games at a time and uncomment section 5A
+    for run_index in range(10):
+        print(f"\n--- Starting run {run_index + 1}/10 ---")
 
-    #     runner = GamesRunner(call_type, config, templates, fairgame_url)
-    #     results = runner.run()
+        runner = GamesRunner(call_type, config, templates, fairgame_url)
+        results = runner.run()
 
-    #     # 6B Save each run separately
-    #     save_results(results, f"{config_name}_{run_index}")
+        # 6B Save each run separately
+        save_results(results, f"{config_name}_{run_index}")
 
-    #     print(f"--- Finished run {run_index + 1}/10 ---")
-    #     time.sleep(5)  
+        print(f"--- Finished run {run_index + 1}/10 ---")
+        time.sleep(5)  
 
 if __name__ == "__main__":
     main()

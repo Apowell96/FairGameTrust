@@ -18,8 +18,8 @@ class MistralConnector(AbstractConnector):
         self.base_delay = 0.1
 
     def send_prompt(self, prompt: str) -> str:
-        max_retries = 5
-        delay = 1
+        max_retries = 10
+        delay = 5
 
         for attempt in range(max_retries):
             try:

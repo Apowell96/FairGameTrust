@@ -14,9 +14,9 @@ load_dotenv()
 
 # Dictionary mapping our abstract model names to provider classes and their corresponding provider model identifiers.
 MODEL_PROVIDER_MAP = {
-    "Claude35Sonnet": (AnthropicConnector, "claude-sonnet-4-6"),
-    "MistralLarge": (MistralConnector, "mistral-large-latest"),
-    "OpenAIGPT4o": (OpenAIConnector, "gpt-4o"),
+    "claude-sonnet-4-6": (AnthropicConnector, "claude-sonnet-4-6"),
+    "mistral-small-2603": (MistralConnector, "mistral-small-2603"),
+    "gpt-4o": (OpenAIConnector, "gpt-4o"),
     # Add more mappings as needed.
     
     "LocalMistral": (MistralConnectorLOCAL, "mistralai/ministral-3-3b")
@@ -113,7 +113,7 @@ def execute_prompt(model_name: str, prompt: str) -> str:
 
 if __name__ == "__main__":
     # Example usage:
-    model_identifier = "Claude35Sonnet"
+    model_identifier = "claude-sonnet-4-6"
     prompt_text = "Tell me a programming joke."
     
     try:

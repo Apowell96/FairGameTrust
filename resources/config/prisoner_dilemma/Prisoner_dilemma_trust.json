@@ -1,8 +1,8 @@
 {
     "name": "Prisoner's Dilemma",
-    "nRounds": 1,
-    "nRoundsIsKnown": true,
-    "llm": "OpenAIGPT4o",
+    "nRounds": 10,
+    "nRoundsIsKnown": false,
+    "llm": "gpt-4o",
     "languages": [
         "en"
     ],
@@ -76,7 +76,7 @@
     "trust": {
         "enabled": true,
         "actions": ["LOOK", "NO_LOOK"],
-        "lookCost": 0.25,
+        "lookCost": 1,
         "historyScope": "only_paid_to_look_last_1",
         "historyFields": ["strategy", "score"]
     }

@@ -4,7 +4,7 @@
     "nRoundsIsKnown": false,
     "llm": "gpt-4o",
     "languages": [
-        "en"
+        "cn"
     ],
     "allAgentPermutations": true,
     "agents": {
@@ -15,6 +15,9 @@
         "personalities": {
             "en": [
                 "none"
+            ],
+            "cn":[
+                "没有任何"
             ]
         },
         "opponentPersonalityProb": [
@@ -32,6 +35,10 @@
             "en": {
                 "strategy1": "OptionA",
                 "strategy2": "OptionB"
+            },
+            "cn": {
+                "strategy1": "选项 A",
+                "strategy2": "选项 B"
             }
         },
         "combinations": {

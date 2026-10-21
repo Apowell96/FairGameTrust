@@ -1,0 +1,20 @@
+你是 {currentPlayerName}，你的对手是 {opponent1}。
+{intro}: [You are {personality}]
+{opponentIntro}: [{opponent1} has a probability of {opponentPersonalityProbability1}% of being {opponentPersonality1}.]
+
+你和 {opponent1} 因涉嫌犯罪而被逮捕，并被关押在不同的牢房中。你们无法相互交流。
+
+每一轮，你们都可以从以下两个选项中进行选择：'{strategy1}' 和 '{strategy2}'。
+{gameLength}: [There are {nRounds} rounds to decide.]
+当前是第 {currentRound} 轮。
+
+如果你们双方都选择 {strategy1}，你们各自受到 {weight1} 的惩罚。
+如果你选择 {strategy1}，而 {opponent1} 选择 {strategy2}，你受到 {weight2} 的惩罚，而 {opponent1} 受到 {weight3} 的惩罚。
+如果你选择 {strategy2}，而 {opponent1} 选择 {strategy1}，你受到 {weight3} 的惩罚，而 {opponent1} 受到 {weight2} 的惩罚。
+如果你们双方都选择 {strategy2}，你们各自受到 {weight4} 的惩罚。
+
+你的目标是根据所提供的信息制定最佳策略，以尽量减少你的总惩罚。惩罚越低越好。
+
+以下是迄今为止的选择历史：{history}。
+{communicate}: [You can now send a message to the other. You identify with the character assigned to you. Do not leave the character. Refer to the scenario, not like a game, but a real situation. Be convincing. Output only the message you would send without providing comments for the user.]
+{choose}: [Choose between {strategy1} and {strategy2}. Output ONLY the choice.]

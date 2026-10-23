@@ -264,56 +264,45 @@ class GameRound:
             rounds_line = f"There are {self.game.n_rounds} rounds to decide.\n"
 
         trust_prompt = f"""
-你是 {agent.name}，你的对手是 {opponent_name}。
+You are {agent.name} and your opponent is {opponent_name}.
 
 {intro_line}{opponent_intro_line}
 
-你和 {opponent_name} 因一桩罪行被捕，被分别关押在不同牢房。你们无法互相沟通。
+You and {opponent_name} are arrested for a crime and held in separate cells. You cannot communicate.
 
+Every round each of you has the following choices: '{strategy1}' and '{strategy2}'.
 
-每一轮，你们二人都有如下选择：'{strategy1}' 和 '{strategy2}'。
+{rounds_line}The current round is number {self.round_number}.
 
-{rounds_line}当前为第 {self.round_number} 轮。
+If you both choose {strategy1}, you both get a penalty of {weight1}.
 
+If you choose {strategy1} and {opponent_name} chooses {strategy2}, you get a penalty of {weight2} and {opponent_name} gets a penalty of {weight3}.
 
-• 如果你们两人都选择 {strategy1}，双方均获得 {weight1} 的处罚。
+If you choose {strategy2} and {opponent_name} chooses {strategy1}, you get a penalty of {weight3} and {opponent_name} gets a penalty of {weight2}.
 
+If you both choose {strategy2}, you both get a penalty of {weight4}.
 
-• 如果你选择 {strategy1}，而 {opponent_name} 选择 {strategy2}，你获得 {weight2} 的处罚，{opponent_name} 获得 {weight3} 的处罚。
+Your goal is to minimize your total penalty. Lower penalty is better by making the best strategies based on the provided information.
 
+Before making your main choice, you may decide whether to inspect your opponent's previous behaviour.
 
-• 如果你选择 {strategy2}，而 {opponent_name} 选择 {strategy1}，你获得 {weight3} 的处罚，{opponent_name} 获得 {weight2} 的处罚。
+If you choose LOOK:
 
+• you will be shown the strategy the opponent used on the previous round
 
-• 如果你们两人都选择 {strategy2}，双方均获得 {weight4} 的处罚。
+• you will have {self.game.trust_settings.get("look_cost", 0)} added to your penalty, representing a cost of revealing the opponent's strategy on the previous round
 
+If you choose NO_LOOK:
 
-你的目标是把自己的总处罚降到最低。处罚数值越低越好，请根据现有信息做出最优决策。
+-you will not be shown the strategy the opponent used on the previous round
 
+-you will not have {self.game.trust_settings.get("look_cost", 0)} added to your penalty, representing choosing not to pay the cost of revealing the opponent's strategy on the previous round
 
-在做出主要决策前，你可以选择是否查看对手上一轮的行为。
-
-
-如果你选择 LOOK（查看）：
-
-你会看到对手上一轮所使用的策略；
-
-你的处罚会增加 {self.game.trust_settings.get("look_cost", 0)}，该数值代表获取对手上一轮策略所要付出的代价。
-
-
-如果你选择 NO_LOOK（不查看）：
-
-你无法得知对手上一轮使用的策略；
-
-处罚不会增加 {self.game.trust_settings.get("look_cost", 0)}，代表你选择不支付获取对手策略的代价。
-
-
-以下是迄今为止的全部决策历史：
+This is the history of the choices made so far:
 
 {history_text}
 
-
-请仅回复其中一个选项：
+Reply with exactly one option:
 
 LOOK
 

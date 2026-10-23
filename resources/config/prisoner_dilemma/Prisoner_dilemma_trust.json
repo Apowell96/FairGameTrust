@@ -1,7 +1,7 @@
 {
     "name": "Prisoner's Dilemma",
     "nRounds": 10,
-    "nRoundsIsKnown": false,
+    "nRoundsIsKnown": true,
     "llm": "gpt-4o",
     "languages": [
         "cn"
@@ -17,7 +17,7 @@
                 "none"
             ],
             "cn":[
-                "没有任何"
+                "none"
             ]
         },
         "opponentPersonalityProb": [

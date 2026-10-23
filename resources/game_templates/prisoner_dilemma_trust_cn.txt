@@ -5,7 +5,7 @@
 你和 {opponent1} 因涉嫌犯罪而被逮捕，并被关押在不同的牢房中。你们无法相互交流。
 
 每一轮，你们都可以从以下两个选项中进行选择：'{strategy1}' 和 '{strategy2}'。
-{gameLength}: [There are {nRounds} rounds to decide.]
+{gameLength}: [共有 {nRounds} 轮决策。]
 当前是第 {currentRound} 轮。
 
 如果你们双方都选择 {strategy1}，你们各自受到 {weight1} 的惩罚。
@@ -16,5 +16,5 @@
 你的目标是根据所提供的信息制定最佳策略，以尽量减少你的总惩罚。惩罚越低越好。
 
 以下是迄今为止的选择历史：{history}。
-{communicate}: [You can now send a message to the other. You identify with the character assigned to you. Do not leave the character. Refer to the scenario, not like a game, but a real situation. Be convincing. Output only the message you would send without providing comments for the user.]
-{choose}: [Choose between {strategy1} and {strategy2}. Output ONLY the choice.]
+{communicate}: [你现在可以向对方发送一条消息。你需要完全代入分配给你的角色，不要脱离角色。请将情境视为真实发生的情况，而不是一场游戏。你的消息应具有说服力。只输出你要发送的消息，不要向用户提供任何评论。]
+{choose}: [在 {strategy1} 和 {strategy2} 之间选择。只输出所选选项。]

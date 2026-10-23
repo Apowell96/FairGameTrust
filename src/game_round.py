@@ -261,7 +261,7 @@ class GameRound:
 
         rounds_line = ""
         if self.game.n_rounds_known:
-            rounds_line = f"There are {self.game.n_rounds} rounds to decide.\n"
+            rounds_line = f"共有 {self.game.n_rounds} 轮决策。\n"
 
         trust_prompt = f"""
 你是 {agent.name}，你的对手是 {opponent_name}。
@@ -336,7 +336,7 @@ NO_LOOK
 
         if isinstance(value, str):
             cleaned = value.strip().lower()
-            return cleaned in {"", "0", "null", "none"}
+            return cleaned in {"", "0", "null", "none", "没有任何"}
 
         return False
 
@@ -387,7 +387,7 @@ NO_LOOK
         Convert history dict into a readable string for prompt insertion.
         """
         if not history:
-            return "No history is currently visible."
+            return "当前没有可见的历史记录。"
 
         return json.dumps(history, indent=2, ensure_ascii=False)
 

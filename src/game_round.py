@@ -261,52 +261,41 @@ class GameRound:
 
         rounds_line = ""
         if self.game.n_rounds_known:
-            rounds_line = f"There are {self.game.n_rounds} rounds to decide.\n"
+            rounds_line = f"Il y a {self.game.n_rounds} tours pour prendre une décision.\n"
 
         trust_prompt = f"""
-You are {agent.name} and your opponent is {opponent_name}.
+Vous êtes {agent.name} et votre adversaire est {opponent_name}.
 
 {intro_line}{opponent_intro_line}
 
-You and {opponent_name} are arrested for a crime and held in separate cells. You cannot communicate.
+Vous et {opponent_name} êtes arrêtés pour un crime et détenus dans des cellules séparées. Vous ne pouvez pas communiquer.
 
-Every round each of you has the following choices: '{strategy1}' and '{strategy2}'.
+À chaque manche, chacun de vous dispose des choix suivants : '{strategy1}' et '{strategy2}'.
+{rounds_line}La manche actuelle est la manche numéro {self.round_number}.
 
-{rounds_line}The current round is number {self.round_number}.
+Si vous choisissez tous les deux {strategy1}, vous recevez chacun une pénalité de {weight1}.
+Si vous choisissez {strategy1} et que {opponent_name} choisit {strategy2}, vous recevez une pénalité de {weight2} et {opponent_name} reçoit une pénalité de {weight3}.
+Si vous choisissez {strategy2} et que {opponent_name} choisit {strategy1}, vous recevez une pénalité de {weight3} et {opponent_name} reçoit une pénalité de {weight2}.
+Si vous choisissez tous les deux {strategy2}, vous recevez chacun une pénalité de {weight4}.
 
-If you both choose {strategy1}, you both get a penalty of {weight1}.
+Votre objectif est de minimiser votre pénalité totale. Plus la pénalité est faible, mieux c'est : choisissez les meilleures stratégies à partir des informations fournies.
+Avant de faire votre choix principal, vous pouvez décider si vous souhaitez consulter le comportement antérieur de votre adversaire.
 
-If you choose {strategy1} and {opponent_name} chooses {strategy2}, you get a penalty of {weight2} and {opponent_name} gets a penalty of {weight3}.
+Si vous choisissez LOOK :
+•	la stratégie utilisée par l'adversaire lors de la manche précédente vous sera indiquée
+•	une pénalité de {self.game.trust_settings.get("look_cost", 0)} sera ajoutée à votre pénalité, ce qui représente le coût de la révélation de la stratégie de l'adversaire lors de la manche précédente
 
-If you choose {strategy2} and {opponent_name} chooses {strategy1}, you get a penalty of {weight3} and {opponent_name} gets a penalty of {weight2}.
+Si vous choisissez NO_LOOK :
+-la stratégie utilisée par l'adversaire lors de la manche précédente ne vous sera pas indiquée
+-aucune pénalité de {self.game.trust_settings.get("look_cost", 0)} ne sera ajoutée à votre pénalité, ce qui correspond au choix de ne pas payer le coût de la révélation de la stratégie de l'adversaire lors de la manche précédente
 
-If you both choose {strategy2}, you both get a penalty of {weight4}.
-
-Your goal is to minimize your total penalty. Lower penalty is better by making the best strategies based on the provided information.
-
-Before making your main choice, you may decide whether to inspect your opponent's previous behaviour.
-
-If you choose LOOK:
-
-• you will be shown the strategy the opponent used on the previous round
-
-• you will have {self.game.trust_settings.get("look_cost", 0)} added to your penalty, representing a cost of revealing the opponent's strategy on the previous round
-
-If you choose NO_LOOK:
-
--you will not be shown the strategy the opponent used on the previous round
-
--you will not have {self.game.trust_settings.get("look_cost", 0)} added to your penalty, representing choosing not to pay the cost of revealing the opponent's strategy on the previous round
-
-This is the history of the choices made so far:
-
+Voici l'historique des choix effectués jusqu'à présent :
 {history_text}
 
-Reply with exactly one option:
-
+Répondez avec exactement une option :
 LOOK
-
 NO_LOOK
+
 """.strip()
 
         return trust_prompt
@@ -376,7 +365,7 @@ NO_LOOK
         Convert history dict into a readable string for prompt insertion.
         """
         if not history:
-            return "No history is currently visible."
+            return "Aucun historique n'est actuellement visible."
 
         return json.dumps(history, indent=2, ensure_ascii=False)
 

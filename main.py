@@ -120,7 +120,7 @@ def main() -> None:
     # 4. Load config first (so we can read the languages list)
     config = load_config_file(config_dir, config_name)
     
-    languages = config.get("languages", ["cn"])
+    languages = config.get("languages", ["fr"])
     templates = {}
     for lang in languages:
         templates[lang] = load_template_file(template_name, lang)

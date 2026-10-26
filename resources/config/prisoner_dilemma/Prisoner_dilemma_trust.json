@@ -1,10 +1,10 @@
 {
     "name": "Prisoner's Dilemma",
     "nRounds": 10,
-    "nRoundsIsKnown": false,
+    "nRoundsIsKnown": true,
     "llm": "gpt-4o",
     "languages": [
-        "en"
+        "fr"
     ],
     "allAgentPermutations": true,
     "agents": {
@@ -13,7 +13,7 @@
             "agent2"
         ],
         "personalities": {
-            "en": [
+            "fr": [
                 "none"
             ]
 
@@ -30,7 +30,7 @@
             "weight4": 2
         },
         "strategies": {
-            "en": {
+            "fr": {
                 "strategy1": "OptionA",
                 "strategy2": "OptionB"
             }
@@ -77,7 +77,7 @@
     "trust": {
         "enabled": true,
         "actions": ["LOOK", "NO_LOOK"],
-        "lookCost": 1,
+        "lookCost": 0,
         "historyScope": "only_paid_to_look_last_1",
         "historyFields": ["strategy", "score"]
     }

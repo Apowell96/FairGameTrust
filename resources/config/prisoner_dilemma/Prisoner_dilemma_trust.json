@@ -2,7 +2,7 @@
     "name": "Prisoner's Dilemma",
     "nRounds": 10,
     "nRoundsIsKnown": true,
-    "llm": "gpt-4o",
+    "llm": "mistral-small-2603",
     "languages": [
         "cn"
     ],

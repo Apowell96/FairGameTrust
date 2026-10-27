@@ -2,7 +2,7 @@
     "name": "Prisoner's Dilemma",
     "nRounds": 10,
     "nRoundsIsKnown": true,
-    "llm": "mistral-small-2603",
+    "llm": "gpt-4o",
     "languages": [
         "cn"
     ],
@@ -83,7 +83,7 @@
     "trust": {
         "enabled": true,
         "actions": ["LOOK", "NO_LOOK"],
-        "lookCost": 1,
+        "lookCost": 0.25,
         "historyScope": "only_paid_to_look_last_1",
         "historyFields": ["strategy", "score"]
     }

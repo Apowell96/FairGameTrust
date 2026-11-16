@@ -282,7 +282,7 @@ If you choose {strategy2} and {opponent_name} chooses {strategy1}, you get a pen
 
 If you both choose {strategy2}, you both get a penalty of {weight4}.
 
-Your goal is to minimize your total penalty. Lower penalty is better by making the best strategies based on the provided information.
+Your goal is to minimize your total penalty. The lower the penalty, the better the outcome. Choose the best strategy based on the information provided.
 
 Before making your main choice, you may decide whether to inspect your opponent's previous behaviour.
 

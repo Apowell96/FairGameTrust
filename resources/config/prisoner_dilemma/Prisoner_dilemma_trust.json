@@ -2,7 +2,7 @@
     "name": "Prisoner's Dilemma",
     "nRounds": 10,
     "nRoundsIsKnown": false,
-    "llm": "gpt-4o",
+    "llm": "claude-sonnet-4-6", 
     "languages": [
         "en"
     ],

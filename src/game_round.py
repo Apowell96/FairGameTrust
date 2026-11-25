@@ -288,9 +288,9 @@ Before making your main choice, you may decide whether to inspect your opponent'
 
 If you choose LOOK:
 
-• you will be shown the strategy the opponent used on the previous round
+-you will be shown the strategy the opponent used on the previous round
 
-• you will have {self.game.trust_settings.get("look_cost", 0)} added to your penalty, representing a cost of revealing the opponent's strategy on the previous round
+-you will have {self.game.trust_settings.get("look_cost", 0)} added to your penalty, representing a cost of revealing the opponent's strategy on the previous round
 
 If you choose NO_LOOK:
 

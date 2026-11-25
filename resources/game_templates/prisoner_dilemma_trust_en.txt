@@ -13,7 +13,7 @@ If you choose {strategy1} and {opponent1} chooses {strategy2}, you get a penalty
 If you choose {strategy2} and {opponent1} chooses {strategy1}, you get a penalty of {weight3} and {opponent1} gets a penalty of {weight2}.
 If you both choose {strategy2}, you both get a penalty of {weight4}.
 
-Your goal is to minimize your total penalty. Lower penalty is better. by making the best strategies based on the provided information.
+Your goal is to minimize your total penalty. The lower the penalty, the better the outcome. Choose the best strategy based on the information provided.
 
 This is the history of the choices made so far: {history}.
 {communicate}: [You can now send a message to the other. You identify with the character assigned to you. Do not leave the character. Refer to the scenario, not like a game, but a real situation. Be convincing. Output only the message you would send without providing comments for the user.]

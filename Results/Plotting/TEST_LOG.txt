@@ -1,0 +1,47 @@
+$ /Library/Developer/CommandLineTools/usr/bin/python3 -B plot_figures.py
+Validated English - horizon known: 120 independent games
+Validated English - horizon unknown: 120 independent games
+Validated French: 120 independent games
+Validated Chinese: 120 independent games
+Exported English - horizon known: two PDFs and PNG previews
+Exported English - horizon unknown: two PDFs and PNG previews
+Exported French: two PDFs and PNG previews
+Exported Chinese: two PDFs and PNG previews
+Saved 8 PDFs to /Users/simonpowers/Repos/FairGameTrust/Results/Plotting/output/figures
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 -B -m unittest discover -s tests -v
+test_boolean_and_list_validation (test_data.DataTests) ... ok
+test_cost_point_75_is_excluded (test_data.DataTests) ... ok
+test_duplicate_games_are_rejected (test_data.DataTests) ... ok
+test_free_look_is_counted (test_data.DataTests) ... ok
+test_incomplete_model_cost_cells_are_rejected (test_data.DataTests) ... ok
+test_inconsistent_games_are_rejected (test_data.DataTests) ... ok
+test_scores_and_actions_are_decoded (test_data.DataTests) ... ok
+test_translated_and_spaced_options (test_data.DataTests) ... ok
+test_all_eight_layouts_and_font_sizes (test_plotting.PlottingTests) ... ok
+test_all_eight_previews_match_reference_figures (test_plotting.PlottingTests) ... ok
+test_all_mean_curves_and_error_bar_endpoints (test_plotting.PlottingTests) ... ok
+test_fingerprint_is_stable_across_distinct_figure_objects (test_plotting.PlottingTests) ... ok
+test_individual_game_dot_counts_and_sizes (test_plotting.PlottingTests) ... ok
+test_missing_font_is_an_explicit_error (test_plotting.PlottingTests) ... ok
+test_pdf_fonts_and_repeatability (test_plotting.PlottingTests) ... ok
+test_penalty_bar_heights_match_full_game_totals (test_plotting.PlottingTests) ... ok
+test_titles_captions_and_font_family (test_plotting.PlottingTests) ... ok
+test_all_480_game_values (test_reproduction.ReproductionTests) ... ok
+test_all_cost_means_sds_and_cis (test_reproduction.ReproductionTests) ... ok
+test_all_round_means_sds_and_cis (test_reproduction.ReproductionTests) ... ok
+test_cli_relocated_without_old_scripts (test_reproduction.ReproductionTests) ... ok
+test_exact_input_file_set_and_hashes (test_reproduction.ReproductionTests) ... ok
+test_validation_only_writes_nothing_and_needs_no_font (test_reproduction.ReproductionTests) ... ok
+test_both_agents_combined_within_game (test_statistics.StatisticsTests) ... ok
+test_ci_uses_game_sd_and_df (test_statistics.StatisticsTests) ... ok
+test_ci_zero_sd_and_invalid_inputs (test_statistics.StatisticsTests) ... ok
+test_duplicate_decisions_are_rejected (test_statistics.StatisticsTests) ... ok
+test_penalty_is_full_game_total_per_agent (test_statistics.StatisticsTests) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 8.321s
+
+OK
+
+Installed successfully. Eight PDFs reproduced exactly, 28 tests passed, all 480 raw CSV checksums unchanged.

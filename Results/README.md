@@ -1,7 +1,6 @@
 # Results
 
-Raw game data, figures and statistical analyses for the FAIRGAME-Trust
-Prisoner's Dilemma experiments. The plotting and statistics packages read
+Raw game data, figures and statistical analyses for the paper Trust behaviours in LLM agents: Costly monitoring in repeated Prisoner's Dilemma games. The plotting and statistics packages read
 the CSV files in this directory directly; no LLM API access is needed to
 analyse these data.
 

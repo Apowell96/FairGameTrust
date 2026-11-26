@@ -6,7 +6,7 @@ The framework enables researchers to investigate how Large Language Model (LLM) 
 
 Agents participate in repeated Prisoner's Dilemma games where they must first decide whether to inspect an opponent's previous actions before selecting their strategy. This allows researchers to analyse trust formation, monitoring behaviour, cooperation patterns, and information-seeking strategies across different models and experimental conditions.
 
-The framework records trust decisions, monitoring costs, strategic choices, and game outcomes, providing a foundation for evaluating how trust emerges and evolves within multi-agent AI systems.
+The framework records monitoring decisions, monitoring costs, strategic choices, and game outcomes, providing a foundation for evaluating how trust emerges and evolves within multi-agent AI systems.
 
 ---
 
@@ -45,7 +45,7 @@ The interaction is repeated over multiple rounds, enabling the analysis of trust
 
 FAIRGAME-Trust records:
 
-* Trust decisions (`LOOK` / `NO_LOOK`)
+* Monitoring decisions (`LOOK` / `NO_LOOK`)
 * Monitoring costs incurred
 * Strategic actions
 * Individual round scores
@@ -83,16 +83,9 @@ This modification transforms trust from an implicit assumption into an observabl
 
 ---
 
-## Trust Mechanism
+## Branches
 
-Before making a strategic decision, agents are presented with two options:
-
-* **LOOK** – Pay a monitoring cost to observe an opponent's previous behaviour.
-* **NO_LOOK** – Avoid the monitoring cost and act without additional information.
-
-Following this decision, agents select their game strategy. Repeated interactions allow researchers to observe how monitoring behaviour changes over time and whether agents transition from verification-based decision-making to trust-based decision-making.
-
----
+The code on the main branch uses the English language prompt templates. The CN and FR branches contain code that use the Chinese and French language templates, respectively.
 
 ## Requirements
 

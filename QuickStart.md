@@ -67,7 +67,7 @@ Generated figures and processed outputs will be stored in the analysis output di
     }
 ```
 
-This configuration enables trust-based monitoring with a monitoring cost of 2 points per observation.
+This configuration enables trust-based monitoring with a monitoring cost of 0.25 points per monitoring action.
 
 ```
 ```

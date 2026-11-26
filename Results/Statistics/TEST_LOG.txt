@@ -1,0 +1,40 @@
+$ /Library/Developer/CommandLineTools/usr/bin/python3 -B run_statistics.py
+Validated English - horizon known: 120 independent games
+Validated English - horizon unknown: 120 independent games
+Validated French: 120 independent games
+Validated Chinese: 120 independent games
+Saved 264 comparisons in 18 tables to /Users/simonpowers/Repos/FairGameTrust/Results/Statistics/output
+
+$ /Library/Developer/CommandLineTools/usr/bin/python3 -B -m unittest discover -s tests -v
+test_boolean_and_list_validation (test_data.DataTests) ... ok
+test_cost_point_75_is_excluded (test_data.DataTests) ... ok
+test_duplicate_games_are_rejected (test_data.DataTests) ... ok
+test_free_look_is_counted (test_data.DataTests) ... ok
+test_incomplete_model_cost_cells_are_rejected (test_data.DataTests) ... ok
+test_inconsistent_games_are_rejected (test_data.DataTests) ... ok
+test_scores_and_actions_are_decoded (test_data.DataTests) ... ok
+test_translated_and_spaced_options (test_data.DataTests) ... ok
+test_all_identical_rank_samples (test_methods.MethodTests) ... ok
+test_duplicate_and_incomplete_games_rejected (test_methods.MethodTests) ... ok
+test_game_windows_and_denominators (test_methods.MethodTests) ... ok
+test_holm_keeps_undefined_planned_slots (test_methods.MethodTests) ... ok
+test_holm_rejects_invalid_p_values (test_methods.MethodTests) ... ok
+test_holm_step_down_unsorted (test_methods.MethodTests) ... ok
+test_invalid_paired_samples (test_methods.MethodTests) ... ok
+test_invalid_rank_samples (test_methods.MethodTests) ... ok
+test_mann_whitney_counts_ties_and_effect_direction (test_methods.MethodTests) ... ok
+test_paired_t_statistic_one_sided_tail_and_ci (test_methods.MethodTests) ... ok
+test_undefined_constant_differences_are_not_zero_tests (test_methods.MethodTests) ... ok
+test_cli_runs_after_relocation_and_accepts_valid_input_updates (test_pipeline.PipelineTests) ... ok
+test_loaded_game_structure (test_pipeline.PipelineTests) ... ok
+test_planned_analysis_families (test_pipeline.PipelineTests) ... ok
+test_validation_only_writes_nothing (test_pipeline.PipelineTests) ... Validated English - horizon known: 120 independent games
+Validated English - horizon unknown: 120 independent games
+Validated French: 120 independent games
+Validated Chinese: 120 independent games
+ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 6.368s
+
+OK
